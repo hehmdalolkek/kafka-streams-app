@@ -10,7 +10,7 @@ description = 'kafka-streams-app'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
@@ -42,4 +42,14 @@ tasks.named('bootBuildImage') {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.register('runDSL', JavaExec) {
+    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.DslExample'
+    classpath sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runProcessorAPI', JavaExec) {
+    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.ProcessorApiExample'
+    classpath sourceSets.main.runtimeClasspath
 }
