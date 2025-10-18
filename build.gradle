@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.6'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.github.davidmc24.gradle.plugin.avro' version '1.9.1'
 }
 
 group = 'ru.hehmdalolkek'
@@ -24,10 +25,14 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.apache.kafka:kafka-streams'
     implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
+    implementation 'org.apache.avro:avro:1.11.4'
+    implementation 'com.mitchseymour:kafka-registryless-avro-serdes:1.0.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
@@ -45,11 +50,12 @@ tasks.named('test') {
 }
 
 tasks.register('runDSL', JavaExec) {
-    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.DslExample'
+    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.c1.DslExample'
     classpath sourceSets.main.runtimeClasspath
 }
 
 tasks.register('runProcessorAPI', JavaExec) {
-    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.ProcessorApiExample'
+    mainClass = 'ru.hehmdalolkek.kafkastreamsapp.c1.ProcessorApiExample'
     classpath sourceSets.main.runtimeClasspath
 }
+

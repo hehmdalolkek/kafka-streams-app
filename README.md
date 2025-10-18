@@ -1,2 +1,3 @@
 gradle\
-kafka streams
+kafka streams\
+avro

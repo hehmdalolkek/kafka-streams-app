@@ -1,0 +1,15 @@
+{
+  "namespace": "ru.hehmdalolkek.kafkastreamsapp.c2",
+  "name": "AvroTweet",
+  "type": "record",
+  "fields": [
+    {
+      "name": "text",
+      "type": "string"
+    },
+    {
+      "name": "created_at",
+      "type": "long"
+    }
+  ]
+}

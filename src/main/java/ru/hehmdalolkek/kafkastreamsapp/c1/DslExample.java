@@ -1,4 +1,4 @@
-package ru.hehmdalolkek.kafkastreamsapp;
+package ru.hehmdalolkek.kafkastreamsapp.c1;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
