@@ -1,4 +1,4 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp.c3;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

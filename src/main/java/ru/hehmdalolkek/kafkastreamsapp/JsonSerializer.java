@@ -1,7 +1,8 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.apache.kafka.common.serialization.Serializer;
 
 /**
@@ -10,6 +11,10 @@ import org.apache.kafka.common.serialization.Serializer;
 public class JsonSerializer<T> implements Serializer<T> {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
+
+    public JsonSerializer() {
+        objectMapper.registerModule(new JavaTimeModule());
+    }
 
     @Override
     public byte[] serialize(String s, T t) {

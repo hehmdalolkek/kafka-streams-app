@@ -1,4 +1,4 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp.c3;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Player {
+public class ScoreEvent {
+
+    private Long gameId;
 
     private Long playerId;
 
-    private String nickname;
+    private Long score;
 
 }

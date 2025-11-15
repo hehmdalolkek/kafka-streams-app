@@ -1,4 +1,4 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp.c4;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Game {
+public class CombinedIndicators {
 
-    private Long gameId;
+    private Integer pulse;
 
-    private String name;
+    private BodyTemperature bodyTemperature;
 
 }

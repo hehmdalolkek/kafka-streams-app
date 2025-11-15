@@ -1,11 +1,8 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp;
 
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;
-import ru.hehmdalolkek.kafkastreamsapp.c2.Tweet;
-import ru.hehmdalolkek.kafkastreamsapp.c2.TweetDeserializer;
-import ru.hehmdalolkek.kafkastreamsapp.c2.TweetSerializer;
 
 /**
  * @author Inna Badekha

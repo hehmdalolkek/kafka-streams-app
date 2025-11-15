@@ -1,4 +1,4 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp.c3;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.utils.Bytes;
@@ -9,6 +9,7 @@ import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.errors.InvalidStateStoreException;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.*;
+import ru.hehmdalolkek.kafkastreamsapp.JsonSerdes;
 
 import java.util.Properties;
 

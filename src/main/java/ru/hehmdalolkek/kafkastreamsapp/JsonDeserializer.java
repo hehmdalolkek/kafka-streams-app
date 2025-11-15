@@ -1,6 +1,7 @@
-package ru.hehmdalolkek.kafkastreamsapp.с3;
+package ru.hehmdalolkek.kafkastreamsapp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class JsonDeserializer<T> implements Deserializer<T> {
 
     public JsonDeserializer(Class<T> targetClass) {
         this.targetClass = targetClass;
+        objectMapper.registerModule(new JavaTimeModule());
     }
 
     @Override
